@@ -1,9 +1,7 @@
 * {
 	box-sizing: border-box;
 }
-body {
-	overflow: hidden;
-}
+
 .carousel-item {
 	height: 100vh;
 	min-height: 300px;
@@ -11,9 +9,11 @@ body {
 	background-size: cover;
 	-webkit-background-size: cover;
 }
+
 .carousel-caption {
 	bottom: 220px;
 }
+
 .carousel-caption h5 {
 	font-size: 45px;
 	text-transform: uppercase;
@@ -21,6 +21,7 @@ body {
 	margin-top: 25px;
 	font-family: merienda;
 }
+
 .carousel-caption p {
 	width: 60%;
 	margin: auto;
@@ -28,6 +29,7 @@ body {
 	line-height: 1.9;
 	font-family: poppins;
 }
+
 .carousel-caption a {
 	text-transform: uppercase;
 	background: #262626;
@@ -36,12 +38,14 @@ body {
 	color: #fff;
 	margin-top: 15px;
 }
+
 .navbar-nav a {
 	font-family: poppins;
 	font-size: 18px;
 	text-transform: uppercase;
 	font-weight: bold;
 }
+
 .navbar-light .navbar-brand {
 	color: #fff;
 	font-size: 18px;
@@ -49,40 +53,54 @@ body {
 	font-weight: bold;
 	letter-spacing: 2px;
 }
-.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
 	color: #fff;
 }
+
 .navbar-light .navbar-nav .nav-link {
 	color: #fff;
 }
+
 .navbar-nav {
 	text-align: center;
 }
+
 .navbar-link {
 	padding: .2rem 1rem;
 }
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
-	color: rgba(0,0,0,.5);
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+	color: rgba(0, 0, 0, .5);
 }
+
 .w-100 {
 	height: 100vh;
 }
+
 .wrapper {
-	margin-top: 5%;
+	margin-top: 10%;
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: -moz-flex;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	align-items: flex-end;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
 }
+
 .content-area {
 	width: 350px;
 	transform-style: preserve-3d;
 	perspective: 1000px;
 }
-.img-area {
+
+.img-area-1 {
 	padding: 20px;
 	height: 350px;
 	width: 350px;
@@ -90,13 +108,15 @@ body {
 	background-size: cover;
 	background-position: center center;
 }
-.img-text h2 {
+
+.img-text-1 h2 {
 	margin: 0;
 	font-family: lobster;
 	letter-spacing: 2px;
 	font-size: 30px;
 }
-.img-text {
+
+.img-text-1 {
 	position: relative;
 	transform-style: preserve-3d;
 	transform-origin: 0 0;
@@ -110,23 +130,82 @@ body {
 	text-align: center;
 	color: #262626;
 }
-.img-text i {
+
+.img-text-1 i {
 	padding: 0 5px;
 }
-.content-area:hover .img-text {
+
+.content-area:hover .img-text-1 {
 	opacity: 1;
 	animation-name: anime;
 }
+
+.profile-box {
+position: relative;
+	width: 350px;
+	height: 350px;
+	left: 10%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	
+}
+
+.profile-box .img-area,
+.profile-box .img-text {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	box-sizing: border-box;
+	transition: .8s;
+}
+
+.img-area img {
+	width: 350px;
+	height: 350px;
+	background-size: cover;
+}
+
+.profile-box:hover .img-area {
+	-webkit-transform: translate3d(400px, 0, 0) rotate3d(0, 1, 0, -10deg);
+}
+
+.img-text {
+	background: #fff;
+	top: 0;
+	left: 100%;
+	padding: 60px 40px;
+	text-align: center;
+}
+
+.img-text h1 {
+	text-transform: uppercase;
+	font-family: poppins;
+	letter-spacing: 4px;
+	font-size: 45px;
+	margin: 0;
+}
+
+.img-text i {
+	padding: 0 5px;
+}
+
+.profile-box:hover .img-text {
+	-webkit-transform: translate3d(-320px, 0, 0) rotate3d(0, 1, 0, 10deg);
+}
+
 @keyframes anime {
 	0% {
 		transform: rotateX(-270deg);
 	}
+
 	60% {
 		transform: rotateX(-380deg);
 	}
+
 	80% {
 		transform: rotateX(-370deg);
 	}
+
 	0% {
 		transform: rotateX(-270deg);
 	}
@@ -134,22 +213,16 @@ body {
 
 @media only screen and (max-width: 767px) {
 	.navbar-nav .ml-auto {
-		background: rgba(0,0,0,0.5);
+		background: rgba(0, 0, 0, 0.5);
 	}
+
 	.navbar-toggler {
 		padding: 1px 5px;
 		font-size: 18px;
 		line-height: 0.3;
 		background: #fff;
 	}
+	.profile-box {
+		left: 50%;
+	}
 }
-
-
-
-
-
-
-
-
-
-
